@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: capsule-app
-        image: vasu_varshney_fordocker-app:latest
+        image: lijazs/retail-devops-project:v1.0.0
         ports:
         - containerPort: 3000
         env:
