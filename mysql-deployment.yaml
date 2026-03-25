@@ -27,11 +27,12 @@ spec:
         - name: MYSQL_PASSWORD
           value: "capsule_password"
         volumeMounts:
-        - name: mysql-storage
+        - name: retail-vol
           mountPath: /var/lib/mysql
       volumes:
-      - name: mysql-storage
-        emptyDir: {}
+      - name: retail-vol
+        persistentVolumeClaim:
+          claimName: retail-pvc
 ---
 apiVersion: v1
 kind: Service
